@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Project 1",
+    "technology": "React, Node.js",
+    "duration": "2021-2023",
+    "latitude": 51.1657,
+    "longitude": 10.4515,
+    "extendableFields": "Additional project details..."
+  },
+  {
+    "name": "Project 2",
+    "technology": "Angular, Java",
+    "duration": "2022-2024",
+    "latitude": 51.1657,
+    "longitude": 11.4515,
+    "extendableFields": "Additional project details..."
+  },
+  {
+    "name": "Project 3",
+    "technology": "Vue.js, Python",
+    "duration": "2023-2025",
+    "latitude": 51.1657,
+    "longitude": 12.4515,
+    "extendableFields": "Additional project details..."
+  }
+]

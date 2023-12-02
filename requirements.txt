@@ -1,0 +1,3 @@
+
+Similarly, you can import Leaflet in your main.js file like this:
+
