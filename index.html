@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Map of Germany</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div id="interactive-map"></div>
-  <script src="main.js"></script>
-</body>
+<html>
+  <head>
+    <title>React App</title>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      class InteractiveMap extends React.Component {
+        componentDidMount() {
+          const map = L.map(this.mapDiv).setView([51.1657, 10.4515], 6);
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+            maxZoom: 18,
+          }).addTo(map);
+          this.props.projects.forEach((project) => {
+            const marker = L.marker([project.latitude, project.longitude]).addTo(map);
+            marker.bindPopup(`
+              <b>${project.name}</b><br>
+              Technology Stack: ${project.technology}<br>
+              Project Duration: ${project.duration}<br>
+              ${project.extendableFields}
+            `);
+          });
+        }
+        render() {
+          return <div ref={(div) => { this.mapDiv = div; }} style={{ height: '100vh' }}></div>;
+        }
+      }
+
+      fetch('projects.json')
+        .then((response) => response.json())
+        .then((data) => {
+          const root = ReactDOM.createRoot(document.getElementById('root'));
+          root.render(<InteractiveMap projects={data} />);
+        });
+    </script>
+  </body>
 </html>
