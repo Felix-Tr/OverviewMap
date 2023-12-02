@@ -1,26 +1,26 @@
 [
   {
-    "name": "Project 1",
-    "technology": "React, Node.js",
-    "duration": "2021-2023",
-    "latitude": 51.1657,
-    "longitude": 10.4515,
-    "extendableFields": "Additional project details..."
+    "name": "BiDiMoVe",
+    "technology": "SREM and SSEM messages, IBISPlus protocol, Public Key Infrastructure (PKI), OCIT-Schnittstellen, V2X",
+    "duration": "2020-2023",
+    "latitude": 53.5511,
+    "longitude": 9.9937,
+    "extendableFields": "Bidirektional, Multimodal, Vernetzt – BiDiMoVe, focuses on improving traffic efficiency and safety in Hamburg. It uses a public transport priority system and secure communication technologies to optimize bus traffic and ensure road safety."
   },
   {
-    "name": "Project 2",
-    "technology": "Angular, Java",
-    "duration": "2022-2024",
-    "latitude": 51.1657,
-    "longitude": 11.4515,
-    "extendableFields": "Additional project details..."
+    "name": "Projekt LOGIN Hannover",
+    "technology": "C-ITS-based prioritization system, bidirectional data exchange",
+    "duration": "2023-2024",
+    "latitude": 52.3759,
+    "longitude": 9.7320,
+    "extendableFields": "LOGIN project aims at future-proof prioritization of trams and buses at traffic lights in Hannover. It uses a C-ITS-based system for bidirectional data exchange between vehicles and traffic infrastructure."
   },
   {
-    "name": "Project 3",
-    "technology": "Vue.js, Python",
-    "duration": "2023-2025",
-    "latitude": 51.1657,
-    "longitude": 12.4515,
-    "extendableFields": "Additional project details..."
+    "name": "BASt Report V 353: C2X-based Public Transport Prioritization",
+    "technology": "C2X communication standard IEEE 802.11p",
+    "duration": "Report published with ongoing recommendations",
+    "latitude": 50.7374,
+    "longitude": 7.0982,
+    "extendableFields": "The report provides a roadmap for the gradual upgrade to C2X-based public transport prioritization at signalized junctions, focusing on planning, implementation, and operation aspects."
   }
 ]
